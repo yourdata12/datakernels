@@ -1,7 +1,7 @@
-"use client"
+"use client";
 
-import { useState, useEffect } from "react"
-import { Button } from "@/components/ui/button"
+import { useState, useEffect } from "react";
+import { Button } from "@/components/ui/button";
 
 const heroTexts = [
   {
@@ -16,26 +16,29 @@ const heroTexts = [
     title: "Future-Ready Applications",
     subtitle: "Scalable solutions built with cutting-edge technology",
   },
-]
+];
 
 export default function Hero() {
-  const [currentText, setCurrentText] = useState(0)
+  const [currentText, setCurrentText] = useState(0);
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setCurrentText((prev) => (prev + 1) % heroTexts.length)
-    }, 5000)
-    return () => clearInterval(interval)
-  }, [])
+      setCurrentText((prev) => (prev + 1) % heroTexts.length);
+    }, 5000);
+    return () => clearInterval(interval);
+  }, []);
 
   return (
-    <section id="home" className="relative min-h-screen flex items-center justify-center bg-background">
+    <section
+      id="home"
+      className="relative min-h-screen flex items-center justify-center bg-background"
+    >
       {/* Background Image with gradient overlay */}
       <div className="absolute inset-0 z-0">
         <div
           className="w-full h-full bg-cover bg-center bg-no-repeat relative"
           style={{
-            backgroundImage: `url('https://img.freepik.com/free-vector/copy-space-blue-circuits-digital-background_23-2148821699.jpg?t=st=1751741064~exp=1751744664~hmac=eb463f0fac3a45f285b7551fd02505e121b2814b0f477bf3ff40a62f982a5de5&w=1380')`,
+            backgroundImage: `url('https://img.freepik.com/free-vector/gradient-technology-symbols-background_23-2149110134.jpg?t=st=1751747890~exp=1751751490~hmac=4c9acbc00a64a67e006c2e96f75edd2b9b080732ecd795bf736076c211a0a8b1&w=1800')`,
           }}
         >
           {/* Black gradient overlay */}
@@ -91,7 +94,9 @@ export default function Hero() {
             size="lg"
             className="px-8 py-4 text-lg font-medium bg-[hsl(var(--core-blue))] hover:bg-[hsl(var(--core-blue))] text-white"
             onClick={() =>
-              document.getElementById("services")?.scrollIntoView({ behavior: "smooth" })
+              document
+                .getElementById("services")
+                ?.scrollIntoView({ behavior: "smooth" })
             }
           >
             Explore Our Services
@@ -101,7 +106,9 @@ export default function Hero() {
             size="lg"
             className="btn-secondary px-8 py-4 text-lg font-medium bg-transparent text-white"
             onClick={() =>
-              document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" })
+              document
+                .getElementById("contact")
+                ?.scrollIntoView({ behavior: "smooth" })
             }
           >
             Get In Touch
@@ -109,5 +116,5 @@ export default function Hero() {
         </div>
       </div>
     </section>
-  )
+  );
 }
