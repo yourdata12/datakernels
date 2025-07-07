@@ -1,13 +1,13 @@
-"use client"
+"use client";
 
-import type React from "react"
-import { useState } from "react"
-import { Mail, Phone, MapPin, Send, Clock, Globe } from "lucide-react"
-import { Button } from "@/components/ui/button"
-import { Input } from "@/components/ui/input"
-import { Textarea } from "@/components/ui/textarea"
-import { Label } from "@/components/ui/label"
-import Image from "next/image"
+import type React from "react";
+import { useState } from "react";
+import { Mail, Phone, MapPin, Send, Clock, Globe } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+import { Label } from "@/components/ui/label";
+import Image from "next/image";
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -15,36 +15,43 @@ export default function Contact() {
     email: "",
     subject: "",
     message: "",
-  })
+  });
 
   const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault()
-    console.log("Form submitted:", formData)
-    setFormData({ name: "", email: "", subject: "", message: "" })
-  }
+    e.preventDefault();
+    console.log("Form submitted:", formData);
+    setFormData({ name: "", email: "", subject: "", message: "" });
+  };
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
     setFormData((prev) => ({
       ...prev,
       [e.target.name]: e.target.value,
-    }))
-  }
+    }));
+  };
 
   return (
     <section id="contact" className="py-24 bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-20" data-aos="fade-up">
-          <h2 className="text-4xl sm:text-5xl font-bold text-foreground mb-6">Contact Us</h2>
+          <h2 className="text-4xl sm:text-5xl font-bold text-foreground mb-6">
+            Contact Us
+          </h2>
           <div className="accent-line mx-auto mb-8"></div>
           <p className="text-xl text-muted-foreground max-w-4xl mx-auto leading-relaxed">
-            Ready to transform your business with AI and cutting-edge technology? Get in touch with us today.
+            Ready to transform your business with AI and cutting-edge
+            technology? Get in touch with us today.
           </p>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-5 gap-12 mb-12">
           <div className="lg:col-span-3 space-y-8" data-aos="fade-right">
             <div className="bg-background rounded-2xl p-8 shadow-xl border border-gray-100">
-              <h3 className="text-2xl font-bold text-foreground mb-6">Send us a Message</h3>
+              <h3 className="text-2xl font-bold text-foreground mb-6">
+                Send us a Message
+              </h3>
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                   <div className="space-y-2">
@@ -130,7 +137,9 @@ export default function Contact() {
               >
                 <Mail className="h-8 w-8 text-core-blue mx-auto mb-3" />
                 <h4 className="font-semibold text-foreground mb-2">Email Us</h4>
-                <p className="text-muted-foreground text-sm">yourdataguys@gmail.com</p>
+                <p className="text-muted-foreground text-sm">
+                  yourdataguys@gmail.com
+                </p>
               </a>
               <div
                 className="bg-background rounded-xl p-6 shadow-lg border border-gray-100 text-center"
@@ -138,7 +147,9 @@ export default function Contact() {
                 data-aos-delay="300"
               >
                 <Clock className="h-8 w-8 text-core-blue mx-auto mb-3" />
-                <h4 className="font-semibold text-foreground mb-2">Working Hours</h4>
+                <h4 className="font-semibold text-foreground mb-2">
+                  Working Hours
+                </h4>
                 <p className="text-muted-foreground text-sm">Mon–Fri 9AM–6PM</p>
               </div>
             </div>
@@ -147,7 +158,7 @@ export default function Contact() {
           <div className="lg:col-span-2" data-aos="fade-left">
             <div className="relative h-full min-h-[400px]">
               <Image
-                src="https://img.freepik.com/free-photo/business-marketing-illustration_23-2151928225.jpg?t=st=1751747243~exp=1751750843~hmac=a8c33a2fb40c722fc2750205ef68fa374853dbd63435e24ef723cca0250d5f70&w=1800"
+                src="/contact.jpg"
                 alt="Contact Us"
                 width={400}
                 height={600}
@@ -166,8 +177,12 @@ export default function Contact() {
             <div className="flex items-center space-x-3">
               <MapPin className="h-6 w-6 text-core-blue" />
               <div>
-                <h3 className="text-lg font-semibold text-foreground">Visit Our Office</h3>
-                <p className="text-muted-foreground">123 Tech Street, Innovation City, IC 12345</p>
+                <h3 className="text-lg font-semibold text-foreground">
+                  Visit Our Office
+                </h3>
+                <p className="text-muted-foreground">
+                  123 Tech Street, Innovation City, IC 12345
+                </p>
               </div>
             </div>
           </div>
@@ -190,7 +205,10 @@ export default function Contact() {
               variant="outline"
               className="w-full border-core-blue text-core-blue hover:bg-core-blue hover:text-white bg-transparent"
               onClick={() =>
-                window.open("https://maps.google.com/?q=123+Tech+Street,+Innovation+City,+IC+12345", "_blank")
+                window.open(
+                  "https://maps.google.com/?q=123+Tech+Street,+Innovation+City,+IC+12345",
+                  "_blank"
+                )
               }
             >
               <Globe className="h-4 w-4 mr-2" />
@@ -200,5 +218,5 @@ export default function Contact() {
         </div>
       </div>
     </section>
-  )
+  );
 }

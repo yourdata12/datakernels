@@ -9,7 +9,7 @@ export default function About() {
           {/* Image Section */}
           <div className="relative" data-aos="zoom-in-right">
             <Image
-              src="https://img.freepik.com/free-vector/hand-drawn-ai-investing-illustration_52683-156484.jpg?t=st=1751745075~exp=1751748675~hmac=4c0616a2a138fb8310627f091505cddbc282152384a234d0b0b66141de2dd2d8&w=1800"
+              src="/about.jpg"
               alt="About DataKernels"
               width={600}
               height={500}

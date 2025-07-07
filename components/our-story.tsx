@@ -28,7 +28,7 @@ export default function OurStory() {
 
           <div className="relative" data-aos="fade-left">
             <Image
-              src="https://img.freepik.com/free-vector/people-business-work_24908-57227.jpg?t=st=1751745436~exp=1751749036~hmac=7e7d626d3aba8da859a986e01fdbe31193f06d88b7a2cc22bea6293aac4609b8&w=1800"
+              src="/our-story1.jpg"
               alt="Founders brainstorming AI business vision"
               width={500}
               height={400}
@@ -41,7 +41,7 @@ export default function OurStory() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div className="relative order-2 lg:order-1" data-aos="fade-right">
             <Image
-              src="https://img.freepik.com/free-vector/online-business-development-gradual-growth-positive-tendency-gain-indicator-statistics-chart-diagram-female-analyst-cartoon-character_335657-2548.jpg?t=st=1751745524~exp=1751749124~hmac=902e71ce84fb25571113d85332dff27a5d2180c907476320e73ac433e2b630ff&w=1800"
+              src="/our-story2.jpg"
               alt="Innovating AI-powered workflow automation"
               width={500}
               height={400}

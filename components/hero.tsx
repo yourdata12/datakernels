@@ -38,7 +38,7 @@ export default function Hero() {
         <div
           className="w-full h-full bg-cover bg-center bg-no-repeat relative"
           style={{
-            backgroundImage: `url('https://img.freepik.com/free-vector/gradient-technology-symbols-background_23-2149110134.jpg?t=st=1751747890~exp=1751751490~hmac=4c9acbc00a64a67e006c2e96f75edd2b9b080732ecd795bf736076c211a0a8b1&w=1800')`,
+            backgroundImage: `url('/ai-bg.avif')`,
           }}
         >
           {/* Black gradient overlay */}
