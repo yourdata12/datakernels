@@ -8,6 +8,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import Image from "next/image";
+import { toast } from "sonner";
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -17,10 +18,33 @@ export default function Contact() {
     message: "",
   });
 
-  const handleSubmit = (e: React.FormEvent) => {
+  // const handleSubmit = (e: React.FormEvent) => {
+  //   e.preventDefault();
+  //   console.log("Form submitted:", formData);
+  //   setFormData({ name: "", email: "", subject: "", message: "" });
+  // };
+
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    console.log("Form submitted:", formData);
-    setFormData({ name: "", email: "", subject: "", message: "" });
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
+      });
+
+      if (res.ok) {
+        toast.success("Your message has been sent successfully! 🚀");
+        setFormData({ name: "", email: "", subject: "", message: "" });
+      } else {
+        const data = await res.json();
+        toast.error(data.error || "Something went wrong.");
+        console.error("Error:", data.error);
+      }
+    } catch (error) {
+      console.error("Failed to send:", error);
+      toast.error("Failed to send message. Please try again.");
+    }
   };
 
   const handleChange = (
@@ -118,7 +142,7 @@ export default function Contact() {
               </form>
             </div>
 
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               <a
                 href="tel:+910000000000"
                 className="bg-background rounded-xl p-6 shadow-lg border border-gray-100 text-center hover:shadow-xl transition-shadow"
@@ -141,7 +165,7 @@ export default function Contact() {
                   yourdataguys@gmail.com
                 </p>
               </a>
-              <div
+              {/* <div
                 className="bg-background rounded-xl p-6 shadow-lg border border-gray-100 text-center"
                 data-aos="fade-up"
                 data-aos-delay="300"
@@ -150,15 +174,15 @@ export default function Contact() {
                 <h4 className="font-semibold text-foreground mb-2">
                   Working Hours
                 </h4>
-                <p className="text-muted-foreground text-sm">Mon–Fri 9AM–6PM</p>
-              </div>
+                <p className="text-muted-foreground text-sm">Mon-Fri 9AM-6PM</p>
+              </div> */}
             </div>
           </div>
 
           <div className="lg:col-span-2" data-aos="fade-left">
             <div className="relative h-full min-h-[400px]">
               <Image
-                src="/contact.jpg"
+                src="/contact1.jpg"
                 alt="Contact Us"
                 width={400}
                 height={600}
@@ -181,7 +205,7 @@ export default function Contact() {
                   Visit Our Office
                 </h3>
                 <p className="text-muted-foreground">
-                  123 Tech Street, Innovation City, IC 12345
+                  North Avenue, Patiala - 147004, Punjab, India
                 </p>
               </div>
             </div>
@@ -189,7 +213,7 @@ export default function Contact() {
 
           <div className="h-80">
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3024.1234567890123!2d-74.0059413!3d40.7127753!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25a316e5b7c5d%3A0x1234567890abcdef!2sNew%20York%2C%20NY%2C%20USA!5e0!3m2!1sen!2sus!4v1234567890123!5m2!1sen!2sus"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3828.1235894843617!2d76.36604667596526!3d30.36169997476535!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39102601854ca5fd%3A0xa0b3354e644b8a78!2sNorth%20Ave%2C%20Prem%20Nagar%2C%20Patiala%2C%20Jassowal%2C%20Punjab%20147004!5e1!3m2!1sen!2sin!4v1751889910570!5m2!1sen!2sin"
               width="100%"
               height="100%"
               style={{ border: 0 }}

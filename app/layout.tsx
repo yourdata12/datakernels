@@ -2,6 +2,7 @@ import type React from "react";
 import type { Metadata } from "next";
 import "./globals.css";
 import AOSProvider from "./AOSProvider";
+import { Toaster } from "sonner";
 
 export const metadata: Metadata = {
   title: "DataKernels - AI & Technology Solutions",
@@ -32,7 +33,10 @@ export default function RootLayout({
         />
       </head>
       <body className="font-hk-grotesk">
-        <AOSProvider>{children}</AOSProvider>
+        <AOSProvider>
+          {children}
+          <Toaster position="top-right" richColors />
+        </AOSProvider>
       </body>
     </html>
   );

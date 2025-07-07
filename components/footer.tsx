@@ -104,9 +104,9 @@ export default function Footer() {
               <div className="flex items-start space-x-3">
                 <MapPin className="h-5 w-5 text-core-blue mt-1" />
                 <span className="text-gray-300">
-                  123 Tech Street
+                  North Avenue, Patiala - 147004
                   <br />
-                  Innovation City, IC 12345
+                   Punjab, India
                 </span>
               </div>
             </div>
@@ -118,7 +118,7 @@ export default function Footer() {
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             <div className="text-center md:text-left">
               <p className="text-gray-400">© {new Date().getFullYear()} DataKernels. All rights reserved.</p>
-              <p className="text-gray-500 text-sm mt-1">Built with Next.js, TypeScript & Tailwind CSS</p>
+              {/* <p className="text-gray-500 text-sm mt-1">Built with Next.js, TypeScript & Tailwind CSS</p> */}
             </div>
 
             <div className="flex items-center space-x-6">

@@ -1,9 +1,9 @@
-"use client"
+"use client";
 
-import { useState, useEffect } from "react"
-import { ChevronLeft, ChevronRight } from "lucide-react"
-import { Button } from "@/components/ui/button"
-import Image from "next/image"
+import { useState, useEffect } from "react";
+import { ChevronLeft, ChevronRight } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import Image from "next/image";
 
 const projects = [
   {
@@ -51,41 +51,59 @@ const projects = [
     tags: ["Big Data", "Analytics", "Scalability"],
     keywords: "big data platform, scalable analytics, enterprise data solution",
   },
-]
+];
 
 export default function Projects() {
-  const [currentProject, setCurrentProject] = useState(0)
+  const [currentSlide, setCurrentSlide] = useState(0);
+  const [isLargeScreen, setIsLargeScreen] = useState(false);
 
-  const nextProject = () => {
-    setCurrentProject((prev) => (prev + 1) % projects.length)
-  }
+  const updateScreenSize = () => {
+    setIsLargeScreen(window.innerWidth >= 1024); // Tailwind's lg breakpoint
+  };
 
-  const prevProject = () => {
-    setCurrentProject((prev) => (prev - 1 + projects.length) % projects.length)
-  }
+  useEffect(() => {
+    updateScreenSize();
+    window.addEventListener("resize", updateScreenSize);
+    return () => window.removeEventListener("resize", updateScreenSize);
+  }, []);
+
+  const totalSlides = isLargeScreen
+    ? Math.ceil(projects.length / 2)
+    : projects.length;
+
+  const nextSlide = () => {
+    setCurrentSlide((prev) => (prev + 1) % totalSlides);
+  };
+
+  const prevSlide = () => {
+    setCurrentSlide((prev) => (prev - 1 + totalSlides) % totalSlides);
+  };
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setCurrentProject((prev) => (prev + 1) % projects.length)
-    }, 7000)
-    return () => clearInterval(interval)
-  }, [])
+      setCurrentSlide((prev) => (prev + 1) % totalSlides);
+    }, 7000);
+    return () => clearInterval(interval);
+  }, [totalSlides]);
 
   return (
     <section id="projects" className="py-24 bg-background overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        {/* Heading */}
         <div className="text-center mb-20" data-aos="fade-up">
           <h2 className="text-4xl sm:text-5xl font-bold text-foreground mb-6">
             Our Projects
           </h2>
           <div className="w-24 h-1 bg-core-blue mx-auto mb-8" />
           <p className="text-xl text-muted-foreground max-w-4xl mx-auto leading-relaxed">
-            Explore how we’ve delivered cutting-edge AI and digital solutions that solve real-world business challenges.
+            Explore how we’ve delivered cutting-edge AI and digital solutions
+            that solve real-world business challenges.
           </p>
         </div>
 
+        {/* Carousel */}
         <div
-          className="relative max-w-4xl mx-auto"
+          className="relative max-w-5xl mx-auto"
           data-aos="fade-up"
           data-aos-delay="100"
         >
@@ -93,25 +111,33 @@ export default function Projects() {
             <Button
               variant="outline"
               size="icon"
-              onClick={prevProject}
+              onClick={prevSlide}
               className="btn-secondary rounded-full bg-transparent"
               aria-label="Previous Project"
             >
               <ChevronLeft className="h-5 w-5" />
             </Button>
 
-            <div className="flex-1 mx-4 overflow-hidden">
+            <div className="overflow-hidden flex-1 mx-4">
               <div
-                className="flex w-full transition-transform duration-500 ease-in-out"
-                style={{ transform: `translateX(-${currentProject * 100}%)` }}
+                className="flex transition-transform duration-500 ease-in-out"
+                style={{
+                  transform: `translateX(-${
+                    currentSlide * (isLargeScreen ? 50 : 100)
+                  }%)`,
+                  width: isLargeScreen
+                    ? `${(projects.length / 2) * 100}%`
+                    : `${projects.length * 100}%`,
+                }}
               >
                 {projects.map((project, index) => (
-                  <div key={index} className="w-full flex-shrink-0 px-2">
-                    <div
-                      className="bg-gray-50 border border-gray-200 rounded-lg overflow-hidden shadow-lg"
-                      data-aos="fade-up"
-                      data-aos-delay={index * 100}
-                    >
+                  <div
+                    key={index}
+                    className={`${
+                      isLargeScreen ? "w-1/2" : "w-full"
+                    } flex-shrink-0 px-2`}
+                  >
+                    <div className="bg-gray-50 border border-gray-200 rounded-lg overflow-hidden shadow-lg">
                       <Image
                         src={project.image}
                         alt={project.title}
@@ -146,7 +172,7 @@ export default function Projects() {
             <Button
               variant="outline"
               size="icon"
-              onClick={nextProject}
+              onClick={nextSlide}
               className="btn-secondary rounded-full bg-transparent"
               aria-label="Next Project"
             >
@@ -156,5 +182,5 @@ export default function Projects() {
         </div>
       </div>
     </section>
-  )
+  );
 }

@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button";
 
 const heroTexts = [
   {
-    title: "Transforming Business with AI",
+    title: "AI for Smarter Business",
     subtitle: "Advanced technology solutions for enterprise growth",
   },
   {
