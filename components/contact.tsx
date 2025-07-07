@@ -17,6 +17,7 @@ export default function Contact() {
     subject: "",
     message: "",
   });
+  const [loading, setLoading] = useState(false);
 
   // const handleSubmit = (e: React.FormEvent) => {
   //   e.preventDefault();
@@ -26,6 +27,8 @@ export default function Contact() {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    setLoading(true);
+
     try {
       const res = await fetch("/api/contact", {
         method: "POST",
@@ -44,6 +47,8 @@ export default function Contact() {
     } catch (error) {
       console.error("Failed to send:", error);
       toast.error("Failed to send message. Please try again.");
+    } finally {
+      setLoading(false);
     }
   };
 
@@ -135,9 +140,10 @@ export default function Contact() {
                 <Button
                   type="submit"
                   className="btn-primary w-full py-3 rounded-xl font-semibold shadow-lg hover:shadow-xl transition-all duration-200 bg-core-blue hover:bg-core-blue/90 text-white"
+                  disabled={loading}
                 >
                   <Send className="h-5 w-5 mr-2" />
-                  Send Message
+                  {loading ? "Sending..." : "Send Message"}
                 </Button>
               </form>
             </div>
