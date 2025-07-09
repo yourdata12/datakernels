@@ -1,8 +1,8 @@
-"use client"
+"use client";
 
-import { Mail, Phone, MapPin, ArrowUp } from "lucide-react"
-import { Button } from "@/components/ui/button"
-import Image from "next/image"
+import { Mail, Phone, MapPin, ArrowUp, ReceiptIndianRupee } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import Image from "next/image";
 
 const quickLinks = [
   { name: "Home", href: "#home" },
@@ -11,7 +11,7 @@ const quickLinks = [
   { name: "Services", href: "#services" },
   { name: "Projects", href: "#projects" },
   { name: "Contact", href: "#contact" },
-]
+];
 
 const services = [
   "Web Development",
@@ -20,19 +20,19 @@ const services = [
   "AI Applications",
   "CRM Automation",
   "N8N Workflows",
-]
+];
 
 export default function Footer() {
   const scrollToSection = (href: string) => {
-    const element = document.getElementById(href.substring(1))
+    const element = document.getElementById(href.substring(1));
     if (element) {
-      element.scrollIntoView({ behavior: "smooth" })
+      element.scrollIntoView({ behavior: "smooth" });
     }
-  }
+  };
 
   const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: "smooth" })
-  }
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
 
   return (
     <footer className="bg-foreground text-background">
@@ -48,8 +48,9 @@ export default function Footer() {
               className="h-16 w-auto invert"
             />
             <p className="text-gray-300 leading-relaxed">
-              Transforming businesses with AI and cutting-edge technology solutions. We specialize in creating
-              intelligent applications that drive growth and innovation.
+              Transforming businesses with AI and cutting-edge technology
+              solutions. We specialize in creating intelligent applications that
+              drive growth and innovation.
             </p>
           </div>
 
@@ -88,8 +89,11 @@ export default function Footer() {
             <div className="space-y-4">
               <div className="flex items-center space-x-3">
                 <Phone className="h-5 w-5 text-core-blue" />
-                <a href="tel:+910000000000" className="text-gray-300 hover:text-core-blue transition-colors">
-                  +91 00000 00000
+                <a
+                  href="tel:+917719432365"
+                  className="text-gray-300 hover:text-core-blue transition-colors"
+                >
+                  +91 77194 32365
                 </a>
               </div>
               <div className="flex items-center space-x-3">
@@ -106,7 +110,15 @@ export default function Footer() {
                 <span className="text-gray-300">
                   North Avenue, Patiala - 147004
                   <br />
-                   Punjab, India
+                  Punjab, India
+                </span>
+              </div>
+              <div className="flex items-start space-x-3">
+                <ReceiptIndianRupee className="h-5 w-5 text-core-blue mt-1" />
+                <span className="text-gray-300">
+                  GST Number:
+                  <br />
+                  03AATFD8458L1ZR
                 </span>
               </div>
             </div>
@@ -117,7 +129,10 @@ export default function Footer() {
         <div className="border-t border-gray-800 mt-12 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             <div className="text-center md:text-left">
-              <p className="text-gray-400">© {new Date().getFullYear()} DataKernels. All rights reserved.</p>
+              <p className="text-gray-400">
+                © {new Date().getFullYear()} DATAKERNELS ANALYTICS AND
+                CONSULTING LLP — All rights reserved.
+              </p>
               {/* <p className="text-gray-500 text-sm mt-1">Built with Next.js, TypeScript & Tailwind CSS</p> */}
             </div>
 
@@ -141,5 +156,5 @@ export default function Footer() {
         </div>
       </div>
     </footer>
-  )
+  );
 }

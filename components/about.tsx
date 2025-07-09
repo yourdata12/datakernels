@@ -30,7 +30,7 @@ export default function About() {
             </div>
 
             <p className="text-lg text-muted-foreground leading-relaxed" data-aos="fade-up" data-aos-delay="100">
-              At <strong>DataKernels</strong>, we harness the power of Artificial Intelligence and modern technologies 
+              At <strong>Datakernels Analytics and Consulting LLP</strong>, we harness the power of Artificial Intelligence and modern technologies 
               to build intelligent solutions that accelerate business growth. Our dedicated team of developers and 
               data experts collaborate closely to craft tools that bring automation, intelligence, and impact.
             </p>

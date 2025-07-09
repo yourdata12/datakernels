@@ -2,7 +2,7 @@
 
 import type React from "react";
 import { useState } from "react";
-import { Mail, Phone, MapPin, Send, Clock, Globe } from "lucide-react";
+import { Mail, Phone, MapPin, Send, Clock, Globe, ReceiptIndianRupee } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -148,16 +148,16 @@ export default function Contact() {
               </form>
             </div>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
               <a
-                href="tel:+910000000000"
+                href="tel:+917719432365"
                 className="bg-background rounded-xl p-6 shadow-lg border border-gray-100 text-center hover:shadow-xl transition-shadow"
                 data-aos="fade-up"
                 data-aos-delay="100"
               >
                 <Phone className="h-8 w-8 text-core-blue mx-auto mb-3" />
                 <h4 className="font-semibold text-foreground mb-2">Call Us</h4>
-                <p className="text-muted-foreground text-sm">+91 00000 00000</p>
+                <p className="text-muted-foreground text-sm">+91 77194 32365</p>
               </a>
               <a
                 href="mailto:yourdataguys@gmail.com"
@@ -171,17 +171,17 @@ export default function Contact() {
                   yourdataguys@gmail.com
                 </p>
               </a>
-              {/* <div
+              <div
                 className="bg-background rounded-xl p-6 shadow-lg border border-gray-100 text-center"
                 data-aos="fade-up"
                 data-aos-delay="300"
               >
-                <Clock className="h-8 w-8 text-core-blue mx-auto mb-3" />
+                <ReceiptIndianRupee className="h-8 w-8 text-core-blue mx-auto mb-3" />
                 <h4 className="font-semibold text-foreground mb-2">
-                  Working Hours
+                  GST Number
                 </h4>
-                <p className="text-muted-foreground text-sm">Mon-Fri 9AM-6PM</p>
-              </div> */}
+                <p className="text-muted-foreground text-sm">03AATFD8458L1ZR</p>
+              </div>
             </div>
           </div>
 
