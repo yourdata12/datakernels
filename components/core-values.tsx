@@ -59,7 +59,7 @@ export default function CoreValues() {
                 style={{ zIndex: 10 }}
               >
                 <div className="w-full h-full p-8 flex flex-col justify-center items-center text-center">
-                  <h3 className="text-2xl group-hover:text-3xl transition-all duration-300 mb-4 font-normal">
+                  <h3 className="text-3xl group-hover:text-4xl transition-all duration-300 mb-4 font-normal">
                     {value.title}
                   </h3>
                   <p className="text-base group-hover:text-md transition-all duration-300 leading-relaxed">

@@ -37,7 +37,7 @@ export default function OurStory() {
 
           <div className="relative" data-aos="zoom-in-up" data-aos-delay="200">
             <Image
-              src="/story-1-pexels.jpg"
+              src="https://images.pexels.com/photos/3184296/pexels-photo-3184296.jpeg"
               alt="Founders brainstorming AI business vision"
               width={500}
               height={400}

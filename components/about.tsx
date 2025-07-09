@@ -8,7 +8,7 @@ export default function About() {
           {/* Image Section */}
           <div className="relative" data-aos="zoom-in-right">
             <Image
-              src="/about-pexels.jpg"
+              src="/about1.jpeg"
               alt="About DataKernels"
               width={600}
               height={500}

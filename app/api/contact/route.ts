@@ -35,7 +35,7 @@ Message: ${message}
     // 3. Send to admin
     await transporter.sendMail({
       from: `"Website Contact" <${process.env.EMAIL_USER}>`,
-      to: "arshbedi2517@gmail.com", // Admin email (hardcoded)
+      to: "admin@datakernels.in", // Admin email (hardcoded)
       subject: `New Contact Form: ${subject}`,
       // text: fullMessage,
       html: `
@@ -109,8 +109,7 @@ Message: ${message}
     <!-- Footer -->
     <div style="background-color: #f0f0f0; padding: 16px; text-align: center; font-size: 12px; color: #888;">
       <p style="margin: 4px 0;">Your Data Guys — Patiala, Punjab, India</p>
-      <p style="margin: 4px 0;">GST: 03AATFD8458L1ZR</p>
-      <p style="margin: 4px 0;">Email: yourdataguys@gmail.com</p>
+      <p style="margin: 4px 0;">Email: admin@datakernels.in</p>
       <p style="margin-top: 10px;">This is an automated confirmation. No reply needed.</p>
     </div>
   </div>
