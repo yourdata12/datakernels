@@ -35,9 +35,9 @@ export default function OurStory() {
             </p>
           </div>
 
-          <div className="relative" data-aos="fade-left">
+          <div className="relative" data-aos="zoom-in-up" data-aos-delay="200">
             <Image
-              src="/our-story1.jpg"
+              src="/story-pexels-1.jpg"
               alt="Founders brainstorming AI business vision"
               width={500}
               height={400}
@@ -50,7 +50,7 @@ export default function OurStory() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div className="relative order-2 lg:order-1" data-aos="fade-right">
             <Image
-              src="/our-story2.jpg"
+              src="/story-pexels-2.jpg"
               alt="Innovating AI-powered workflow automation"
               width={500}
               height={400}
@@ -58,7 +58,11 @@ export default function OurStory() {
             />
           </div>
 
-          <div className="space-y-6 order-1 lg:order-2" data-aos="fade-left">
+          <div
+            className="space-y-6 order-1 lg:order-2"
+            data-aos="fade-up"
+            data-aos-delay="150"
+          >
             <h3 className="text-2xl font-semibold text-foreground">
               Innovation at Our Core
             </h3>

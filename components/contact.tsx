@@ -2,7 +2,15 @@
 
 import type React from "react";
 import { useState } from "react";
-import { Mail, Phone, MapPin, Send, Clock, Globe, ReceiptIndianRupee } from "lucide-react";
+import {
+  Mail,
+  Phone,
+  MapPin,
+  Send,
+  Clock,
+  Globe,
+  ReceiptIndianRupee,
+} from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -185,10 +193,14 @@ export default function Contact() {
             </div>
           </div>
 
-          <div className="lg:col-span-2" data-aos="fade-left">
+          <div
+            className="lg:col-span-2"
+            data-aos="zoom-in-up"
+            data-aos-delay="200"
+          >
             <div className="relative h-full min-h-[400px]">
               <Image
-                src="/contact1.jpg"
+                src="https://images.pexels.com/photos/7504858/pexels-photo-7504858.jpeg"
                 alt="Contact Us"
                 width={400}
                 height={600}
