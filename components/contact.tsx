@@ -156,7 +156,7 @@ export default function Contact() {
               </form>
             </div>
 
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               <a
                 href="tel:+917719432365"
                 className="bg-background rounded-xl p-6 shadow-lg border border-gray-100 text-center hover:shadow-xl transition-shadow"
@@ -168,7 +168,7 @@ export default function Contact() {
                 <p className="text-muted-foreground text-sm">+91 77194 32365</p>
               </a>
               <a
-                href="mailto:yourdataguys@gmail.com"
+                href="mailto:admin@datakernels.in"
                 className="bg-background rounded-xl p-6 shadow-lg border border-gray-100 text-center hover:shadow-xl transition-shadow"
                 data-aos="fade-up"
                 data-aos-delay="200"
@@ -176,10 +176,10 @@ export default function Contact() {
                 <Mail className="h-8 w-8 text-core-blue mx-auto mb-3" />
                 <h4 className="font-semibold text-foreground mb-2">Email Us</h4>
                 <p className="text-muted-foreground text-sm">
-                  yourdataguys@gmail.com
+                  admin@datakernels.in
                 </p>
               </a>
-              <div
+              {/* <div
                 className="bg-background rounded-xl p-6 shadow-lg border border-gray-100 text-center"
                 data-aos="fade-up"
                 data-aos-delay="300"
@@ -189,7 +189,7 @@ export default function Contact() {
                   GST Number
                 </h4>
                 <p className="text-muted-foreground text-sm">03AATFD8458L1ZR</p>
-              </div>
+              </div> */}
             </div>
           </div>
 

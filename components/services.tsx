@@ -77,7 +77,7 @@ const services: ServiceType[] = [
     icon: Brain,
     title: "AI App Creation",
     description: "Intelligent applications powered by machine learning",
-    image: "https://images.pexels.com/photos/9783353/pexels-photo-9783353.jpeg",
+    image: "https://img.freepik.com/free-vector/abstract-artificial-intelligence-background_23-2147738874.jpg?t=st=1752088625~exp=1752092225~hmac=0c8a7e01404efd0173051ad1425e1c324c051b5274cf49cb140b8fa261a9292a&w=1380",
     fullDescription:
       "We develop AI-powered applications that learn and adapt to user behavior...",
     features: [
