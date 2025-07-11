@@ -8,6 +8,8 @@ import Stats from "@/components/stats";
 import Projects from "@/components/projects";
 import Contact from "@/components/contact";
 import Footer from "@/components/footer";
+import Industries from "@/components/industries";
+import Solutions from "@/components/solutions";
 
 export default function Home() {
   return (
@@ -18,8 +20,10 @@ export default function Home() {
       <Stats />
       <OurStory />
       <Services />
+      <Solutions />
       <CoreValues />
-      <Projects />
+      {/* <Projects /> */}
+      <Industries />
       <Contact />
       <Footer />
     </main>
