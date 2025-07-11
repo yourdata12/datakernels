@@ -10,7 +10,7 @@ const quickLinks = [
   { name: "About", href: "#about" },
   { name: "Our Story", href: "#our-story" },
   { name: "Services", href: "#services" },
-  { name: "Projects", href: "#projects" },
+  { name: "Industries", href: "#industries" },
   { name: "Contact", href: "#contact" },
 ];
 
@@ -20,7 +20,7 @@ const services = [
   "Data Analytics",
   "AI Applications",
   "CRM Automation",
-  "N8N Workflows",
+  "Agentic AI Flows",
 ];
 
 export default function Footer() {
