@@ -3,6 +3,7 @@
 import { Mail, Phone, MapPin, ArrowUp, ReceiptIndianRupee } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
+import Link from "next/link";
 
 const quickLinks = [
   { name: "Home", href: "#home" },
@@ -137,12 +138,14 @@ export default function Footer() {
             </div>
 
             <div className="flex items-center space-x-6">
-              <button className="text-gray-400 hover:text-core-blue transition-colors text-sm">
-                Privacy Policy
-              </button>
-              <button className="text-gray-400 hover:text-core-blue transition-colors text-sm">
+              <Link href="/privacy">
+                <button className="text-gray-400 hover:text-core-blue transition-colors text-sm">
+                  Privacy Policy
+                </button>
+              </Link>
+              {/* <button className="text-gray-400 hover:text-core-blue transition-colors text-sm">
                 Terms of Service
-              </button>
+              </button> */}
               <Button
                 variant="outline"
                 size="icon"

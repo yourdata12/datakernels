@@ -1,54 +1,60 @@
-"use client"
+"use client";
 
-import { useState, useEffect } from "react"
-import { Menu, X } from "lucide-react"
-import { Button } from "@/components/ui/button"
-import Image from "next/image"
+import { useState, useEffect } from "react";
+import { Menu, X } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import Image from "next/image";
 
 const navItems = [
   { name: "Home", href: "#home" },
   { name: "About", href: "#about" },
   { name: "Our Story", href: "#our-story" },
   { name: "Services", href: "#services" },
-  { name: "Projects", href: "#projects" },
-]
+  { name: "Industries", href: "#industries" },
+];
 
 export default function Navbar() {
-  const [activeSection, setActiveSection] = useState("home")
-  const [isMenuOpen, setIsMenuOpen] = useState(false)
-  const [scrolled, setScrolled] = useState(false)
+  const [activeSection, setActiveSection] = useState("home");
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
-      const sections = [...navItems.map((item) => item.href.substring(1)), "contact"]
-      const scrollPosition = window.scrollY + 100
-      setScrolled(window.scrollY > 50)
+      const sections = [
+        ...navItems.map((item) => item.href.substring(1)),
+        "contact",
+      ];
+      const scrollPosition = window.scrollY + 100;
+      setScrolled(window.scrollY > 50);
 
       for (const section of sections) {
-        const element = document.getElementById(section)
+        const element = document.getElementById(section);
         if (element) {
-          const offsetTop = element.offsetTop
-          const offsetHeight = element.offsetHeight
+          const offsetTop = element.offsetTop;
+          const offsetHeight = element.offsetHeight;
 
-          if (scrollPosition >= offsetTop && scrollPosition < offsetTop + offsetHeight) {
-            setActiveSection(section)
-            break
+          if (
+            scrollPosition >= offsetTop &&
+            scrollPosition < offsetTop + offsetHeight
+          ) {
+            setActiveSection(section);
+            break;
           }
         }
       }
-    }
+    };
 
-    window.addEventListener("scroll", handleScroll)
-    return () => window.removeEventListener("scroll", handleScroll)
-  }, [])
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   const scrollToSection = (href: string) => {
-    const element = document.getElementById(href.substring(1))
+    const element = document.getElementById(href.substring(1));
     if (element) {
-      element.scrollIntoView({ behavior: "smooth" })
+      element.scrollIntoView({ behavior: "smooth" });
     }
-    setIsMenuOpen(false)
-  }
+    setIsMenuOpen(false);
+  };
 
   return (
     <nav
@@ -62,19 +68,22 @@ export default function Navbar() {
         <div className="flex justify-between items-center h-20">
           {/* Logo */}
           <div className="flex-shrink-0" data-aos="fade-right">
-            <a href='#'>
-            <Image
-              src="/dk-logo.png"
-              alt="DataKernels"
-              width={250}
-              height={80}
-              className="h-16 w-auto"
-            />
+            <a href="#">
+              <Image
+                src="/dk-logo.png"
+                alt="DataKernels"
+                width={250}
+                height={80}
+                className="h-16 w-auto"
+              />
             </a>
           </div>
 
           {/* Desktop Navigation */}
-          <div className="hidden lg:flex items-center space-x-4" data-aos="fade-down">
+          <div
+            className="hidden lg:flex items-center space-x-4"
+            data-aos="fade-down"
+          >
             {navItems.map((item, index) => (
               <button
                 key={item.name}
@@ -110,7 +119,11 @@ export default function Navbar() {
               className="hover:bg-gray-100"
               aria-label="Toggle menu"
             >
-              {isMenuOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
+              {isMenuOpen ? (
+                <X className="h-5 w-5" />
+              ) : (
+                <Menu className="h-5 w-5" />
+              )}
             </Button>
           </div>
         </div>
@@ -145,5 +158,5 @@ export default function Navbar() {
         </div>
       )}
     </nav>
-  )
+  );
 }

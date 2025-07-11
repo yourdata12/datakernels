@@ -11,6 +11,7 @@ import {
   Settings,
   Workflow,
   ArrowRight,
+  BrainCircuit,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import {
@@ -77,7 +78,8 @@ const services: ServiceType[] = [
     icon: Brain,
     title: "AI App Creation",
     description: "Intelligent applications powered by machine learning",
-    image: "https://img.freepik.com/free-vector/abstract-artificial-intelligence-background_23-2147738874.jpg?t=st=1752088625~exp=1752092225~hmac=0c8a7e01404efd0173051ad1425e1c324c051b5274cf49cb140b8fa261a9292a&w=1380",
+    image:
+      "https://img.freepik.com/free-vector/abstract-artificial-intelligence-background_23-2147738874.jpg?t=st=1752088625~exp=1752092225~hmac=0c8a7e01404efd0173051ad1425e1c324c051b5274cf49cb140b8fa261a9292a&w=1380",
     fullDescription:
       "We develop AI-powered applications that learn and adapt to user behavior...",
     features: [
@@ -102,17 +104,19 @@ const services: ServiceType[] = [
     ],
   },
   {
-    icon: Workflow,
-    title: "N8N Workflows",
-    description: "Advanced workflow automation with n8n",
-    image: "https://images.pexels.com/photos/3862599/pexels-photo-3862599.jpeg",
+    icon: BrainCircuit, // or Settings2, Bot, Zap, etc.
+    title: "Agentic AI Flows",
+    description:
+      "Autonomous AI systems for scalable, logic-driven task automation.",
+    image:
+      "https://img.freepik.com/free-photo/computer-scientist-updating-ai-systems_482257-91183.jpg?t=st=1752237138~exp=1752240738~hmac=8abcee646bc98eee6e774cce4980eaac917fd04507cc4d9ff27c87521c5d6859&w=1380", // use keyword: `ai automation`, `workflow automation`, `healthcare ai`
     fullDescription:
-      "We specialize in creating complex automation workflows using n8n...",
+      "We design agent-based systems that independently plan, reason, and execute tasks across APIs, databases, and services. These agentic flows enable businesses to automate complex operations with minimal human input.",
     features: [
-      "Custom Workflow Design",
-      "API Integrations",
-      "Trigger-based Automation",
-      "Data Transformation",
+      "Multi-agent task orchestration",
+      "Autonomous planning & execution",
+      "Cross-API coordination",
+      "Error handling & retry logic",
     ],
   },
 ];
@@ -145,13 +149,11 @@ export default function Services() {
   }, []);
 
   const nextSlide = () => {
-    setCurrentIndex((prev) => (prev + cardsToShow) % services.length);
+    setCurrentIndex((prev) => (prev + 1) % services.length);
   };
 
   const prevSlide = () => {
-    setCurrentIndex(
-      (prev) => (prev - cardsToShow + services.length) % services.length
-    );
+    setCurrentIndex((prev) => (prev - 1 + services.length) % services.length);
   };
 
   const getVisibleServices = () => {

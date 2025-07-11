@@ -1,12 +1,11 @@
 import React from "react";
 
 import {
-  Building2,
   CheckCircle,
   Shield,
+  ShoppingBag,
   ShoppingCart,
-  Star,
-  Users,
+  Truck,
 } from "lucide-react";
 import {
   Carousel,
@@ -22,7 +21,6 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
 
 function Industries() {
   const industries = [
@@ -30,7 +28,7 @@ function Industries() {
       icon: Shield,
       title: "Healthcare AI",
       description:
-        "Specialized AI solutions for healthcare organizations, automating complex processes like Life Care Plan generation and medical workflow optimization.",
+        "AI tools for clinics and care providers to automate documents, summarize medical records, and manage patient data efficiently.",
       features: [
         "HIPAA Compliant",
         "Medical Automation",
@@ -42,7 +40,7 @@ function Industries() {
       icon: ShoppingCart,
       title: "Retail AI",
       description:
-        "Transform retail operations with intelligent inventory management, customer behavior analysis, and personalized shopping experiences.",
+        "Smart retail solutions for inventory tracking, analyzing customer behavior, and improving buying experiences.",
       features: [
         "Inventory Optimization",
         "Customer Analytics",
@@ -51,23 +49,32 @@ function Industries() {
       color: "from-purple-500 to-pink-500",
     },
     {
-      icon: Building2,
-      title: "Enterprise AI",
+      icon: Truck,
+      title: "Supply Chain AI",
       description:
-        "Comprehensive AI solutions for large enterprises, focusing on process automation, data analytics, and operational efficiency.",
+        "AI-powered logistics to forecast demand, plan routes, and automate tracking across the supply chain.",
       features: [
-        "Process Automation",
-        "Data Analytics",
-        "Operational Intelligence",
+        "Route Optimization",
+        "Demand Forecasting",
+        "Logistics Automation",
       ],
-      color: "from-green-500 to-emerald-500",
+      color: "from-yellow-500 to-orange-500",
+    },
+    {
+      icon: ShoppingBag,
+      title: "E-commerce AI",
+      description:
+        "Boost online sales using AI for product suggestions, price adjustments, and user behavior tracking.",
+      features: ["AI Recommendations", "Dynamic Pricing", "Churn Prediction"],
+      color: "from-indigo-500 to-blue-700",
     },
   ];
+
   return (
-    <section id="about" className="py-20 px-6 bg-white">
+    <section id="industries" className="py-20 px-6 bg-white">
       <div className="container mx-auto max-w-6xl">
-        {/* Industries Carousel */}
-        <div className="text-center mb-8">
+        {/* Section Header */}
+        <div className="text-center mb-8" data-aos="fade-up">
           <h3 className="text-3xl font-bold mb-4">Industries We Serve</h3>
           <p className="text-gray-600 text-lg max-w-2xl mx-auto">
             Delivering specialized AI solutions across diverse industries with
@@ -75,11 +82,17 @@ function Industries() {
           </p>
         </div>
 
-        <div className="relative px-12">
-          <Carousel className="w-full max-w-5xl mx-auto">
+        {/* Carousel */}
+        <div className="relative px-12" data-aos="zoom-in">
+          <Carousel className="w-full max-w-5xl mx-auto" opts={{ loop: true }}>
             <CarouselContent>
               {industries.map((industry, index) => (
-                <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
+                <CarouselItem
+                  key={index}
+                  className="md:basis-1/2 lg:basis-1/3"
+                  data-aos="fade-up"
+                  data-aos-delay={index * 100}
+                >
                   <Card className="border-0 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 h-full">
                     <CardHeader className="text-center">
                       <div
@@ -100,6 +113,8 @@ function Industries() {
                           <div
                             key={idx}
                             className="flex items-center text-sm text-gray-700"
+                            data-aos="fade-up"
+                            data-aos-delay={100 + idx * 50}
                           >
                             <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
                             {feature}

@@ -45,7 +45,7 @@ function Solutions() {
   return (
     <section id="services" className="py-20 px-6 bg-white">
       <div className="container mx-auto max-w-6xl">
-        <div className="text-center mb-16">
+        <div className="text-center mb-16" data-aos="fade-up">
           <Badge className="mb-4 bg-purple-100 text-purple-700 hover:bg-purple-100">
             <Bot className="w-4 h-4 mr-2" />
             Our Solutions
@@ -64,6 +64,8 @@ function Solutions() {
           {services.map((service, index) => (
             <Card
               key={index}
+              data-aos={index % 2 === 0 ? "zoom-in" : "fade-up"}
+              data-aos-delay={index * 100}
               className="border-0 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 bg-gradient-to-br from-white to-gray-50"
             >
               <CardHeader>
@@ -81,6 +83,8 @@ function Solutions() {
                     <div
                       key={idx}
                       className="flex items-center text-sm text-gray-700"
+                      data-aos="fade-up"
+                      data-aos-delay={100 + idx * 50}
                     >
                       <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
                       {feature}

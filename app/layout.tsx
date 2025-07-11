@@ -5,12 +5,12 @@ import AOSProvider from "./AOSProvider";
 import { Toaster } from "sonner";
 
 export const metadata: Metadata = {
-  title: "DataKernels - AI & Technology Solutions",
+  title: "Datakernels Analytics and Consulting LLP",
   description:
     "Leading AI and technology company specializing in web development, app development, data analytics, AI applications, and CRM automations.",
   keywords:
-    "AI, technology, web development, app development, data analytics, CRM automation, n8n workflows",
-  generator: "v0.dev",
+    "AI, technology, web development, app development, data analytics, CRM automation, Agentic AI flows",
+  // generator: "v0.dev",
 };
 
 export default function RootLayout({
