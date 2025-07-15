@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
+import Link from "next/link";
 
 const navItems = [
   { name: "Home", href: "#home" },
@@ -100,6 +101,12 @@ export default function Navbar() {
                 )}
               </button>
             ))}
+
+            <button
+              className={`relative px-2 py-2 text-md font-medium transition-all duration-200 text-gray-700 hover:text-[hsl(var(--core-blue))] `}
+            >
+              <Link href="/careers">Careers</Link>
+            </button>
 
             <Button
               onClick={() => scrollToSection("#contact")}

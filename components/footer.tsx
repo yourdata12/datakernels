@@ -11,7 +11,7 @@ const quickLinks = [
   { name: "Our Story", href: "#our-story" },
   { name: "Services", href: "#services" },
   { name: "Industries", href: "#industries" },
-  { name: "Contact", href: "#contact" },
+  // { name: "Contact", href: "#contact" },
 ];
 
 const services = [
@@ -69,6 +69,10 @@ export default function Footer() {
                   </button>
                 </li>
               ))}
+              <li className="text-gray-300 hover:text-core-blue transition-colors cursor-pointer">
+                {" "}
+                <Link href="/careers">Careers</Link>
+              </li>
             </ul>
           </div>
 

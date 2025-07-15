@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
+import Link from "next/link";
 
 const heroTexts = [
   {
@@ -101,18 +102,16 @@ export default function Hero() {
           >
             Explore Our Services
           </Button>
-          <Button
-            variant="outline"
-            size="lg"
-            className="btn-secondary px-8 py-4 text-lg font-medium bg-transparent text-white"
-            onClick={() =>
-              document
-                .getElementById("contact")
-                ?.scrollIntoView({ behavior: "smooth" })
-            }
-          >
-            Get In Touch
-          </Button>
+
+          <Link href={"/careers"}>
+            <Button
+              variant="outline"
+              size="lg"
+              className="btn-secondary px-8 py-4 text-lg font-medium bg-transparent text-white"
+            >
+              Join Our Team
+            </Button>
+          </Link>
         </div>
       </div>
     </section>
