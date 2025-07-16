@@ -92,7 +92,7 @@ export default function Footer() {
           <div className="space-y-6">
             <h4 className="text-xl font-bold text-background">Contact Us</h4>
             <div className="space-y-4">
-              <div className="flex items-center space-x-3">
+              {/* <div className="flex items-center space-x-3">
                 <Phone className="h-5 w-5 text-core-blue" />
                 <a
                   href="tel:+917719432365"
@@ -100,7 +100,7 @@ export default function Footer() {
                 >
                   +91 77194 32365
                 </a>
-              </div>
+              </div> */}
               <div className="flex items-center space-x-3">
                 <Mail className="h-5 w-5 text-core-blue" />
                 <a

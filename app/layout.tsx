@@ -31,6 +31,7 @@ export default function RootLayout({
           href="https://fonts.googleapis.com/css2?family=HK+Grotesk:wght@300;400;500;600;700;800;900&display=swap"
           rel="stylesheet"
         />
+        <link rel="icon" href="/fav.jpg" sizes="any" />
       </head>
       <body className="font-hk-grotesk">
         <AOSProvider>

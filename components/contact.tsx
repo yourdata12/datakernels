@@ -83,9 +83,12 @@ export default function Contact() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-5 gap-12 mb-12">
-          <div className="lg:col-span-3 space-y-8" data-aos="fade-right">
-            <div className="bg-background rounded-2xl p-8 shadow-xl border border-gray-100">
+        <div className="grid grid-cols-1 lg:grid-cols-5 gap-12 mb-12 lg:h-[600px]">
+          <div
+            className="lg:col-span-3 h-full flex flex-col justify-between"
+            data-aos="fade-right"
+          >
+            <div className="bg-background rounded-2xl p-8 shadow-xl border border-gray-100 h-full flex flex-col">
               <h3 className="text-2xl font-bold text-foreground mb-6">
                 Send us a Message
               </h3>
@@ -156,8 +159,8 @@ export default function Contact() {
               </form>
             </div>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-              <a
+            {/* <div className="grid grid-cols-1 sm:grid-cols-1 gap-4"> */}
+            {/* <a
                 href="tel:+917719432365"
                 className="bg-background rounded-xl p-6 shadow-lg border border-gray-100 text-center hover:shadow-xl transition-shadow"
                 data-aos="fade-up"
@@ -166,8 +169,8 @@ export default function Contact() {
                 <Phone className="h-8 w-8 text-core-blue mx-auto mb-3" />
                 <h4 className="font-semibold text-foreground mb-2">Call Us</h4>
                 <p className="text-muted-foreground text-sm">+91 77194 32365</p>
-              </a>
-              <a
+              </a> */}
+            {/* <a
                 href="mailto:admin@datakernels.in"
                 className="bg-background rounded-xl p-6 shadow-lg border border-gray-100 text-center hover:shadow-xl transition-shadow"
                 data-aos="fade-up"
@@ -178,8 +181,8 @@ export default function Contact() {
                 <p className="text-muted-foreground text-sm">
                   admin@datakernels.in
                 </p>
-              </a>
-              {/* <div
+              </a> */}
+            {/* <div
                 className="bg-background rounded-xl p-6 shadow-lg border border-gray-100 text-center"
                 data-aos="fade-up"
                 data-aos-delay="300"
@@ -190,15 +193,15 @@ export default function Contact() {
                 </h4>
                 <p className="text-muted-foreground text-sm">03AATFD8458L1ZR</p>
               </div> */}
-            </div>
+            {/* </div> */}
           </div>
 
           <div
-            className="lg:col-span-2"
+            className="lg:col-span-2 h-full"
             data-aos="zoom-in-up"
             data-aos-delay="200"
           >
-            <div className="relative h-full min-h-[400px]">
+            <div className="relative h-full w-full">
               <Image
                 src="https://images.pexels.com/photos/7504858/pexels-photo-7504858.jpeg"
                 alt="Contact Us"
@@ -212,7 +215,7 @@ export default function Contact() {
         </div>
 
         <div
-          className="w-full bg-background rounded-2xl shadow-xl border border-gray-100 overflow-hidden"
+          className="w-full bg-background rounded-2xl shadow-xl border border-gray-100 overflow-hidden  mt-[120px]"
           data-aos="zoom-in"
         >
           <div className="p-6 border-b border-gray-100">

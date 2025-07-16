@@ -153,6 +153,12 @@ export default function Navbar() {
                 {item.name}
               </button>
             ))}
+            <Link href={"/careers"}>
+              <button className="block w-full text-left px-4 py-3 text-base font-medium transition-colors text-gray-700 hover:text-[hsl(var(--core-blue))] hover:bg-gray-50">
+                {" "}
+                Careers
+              </button>
+            </Link>
 
             <Button
               onClick={() => scrollToSection("#contact")}

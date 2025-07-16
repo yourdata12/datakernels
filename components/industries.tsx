@@ -83,13 +83,13 @@ function Industries() {
         </div>
 
         {/* Carousel */}
-        <div className="relative px-12" data-aos="zoom-in">
-          <Carousel className="w-full max-w-5xl mx-auto" opts={{ loop: true }}>
+        <div className="relative px-6 lg:px-12" data-aos="zoom-in">
+          <Carousel className="w-full max-w-5xl mx-auto " opts={{ loop: true }}>
             <CarouselContent>
               {industries.map((industry, index) => (
                 <CarouselItem
                   key={index}
-                  className="md:basis-1/2 lg:basis-1/3"
+                  className="basis-full sm:basis-3/4 md:basis-1/2 lg:basis-1/3"
                   data-aos="fade-up"
                   data-aos-delay={index * 100}
                 >
