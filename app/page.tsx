@@ -10,6 +10,7 @@ import Contact from "@/components/contact";
 import Footer from "@/components/footer";
 import Industries from "@/components/industries";
 import Solutions from "@/components/solutions";
+import FaqSection from "@/components/faq-section";
 
 export default function Home() {
   return (
@@ -24,6 +25,7 @@ export default function Home() {
       <CoreValues />
       {/* <Projects /> */}
       <Industries />
+      <FaqSection />
       <Contact />
       <Footer />
     </main>

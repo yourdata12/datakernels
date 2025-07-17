@@ -42,13 +42,13 @@ export default function Footer() {
           {/* Company Info */}
           <div className="space-y-6">
             <Link href="#">
-            <Image
-              src="/logo.jpeg"
-              alt="DataKernels"
-              width={240}
-              height={80}
-              className="h-16 w-auto invert"
-            />
+              <Image
+                src="/logo.jpeg"
+                alt="DataKernels"
+                width={240}
+                height={80}
+                className="h-16 w-auto invert"
+              />
             </Link>
             <p className="text-gray-300 leading-relaxed">
               Transforming businesses with AI and cutting-edge technology

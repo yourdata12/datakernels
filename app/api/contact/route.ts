@@ -35,19 +35,34 @@ Message: ${message}
     // 3. Send to admin
     await transporter.sendMail({
       from: `"Website Contact" <${process.env.EMAIL_USER}>`,
-      to: "admin@datakernels.in", // Admin email (hardcoded)
+      to: "arshbedi2517@gmail.com", // Admin email (hardcoded)
       subject: `New Contact Form: ${subject}`,
       // text: fullMessage,
       html: `
-  <div style="font-family: Arial, sans-serif; font-size: 15px; color: #333;">
-    <h2 style="color: #2e6da4;">📩 New Contact Form Submission</h2>
-    <p><strong>Name:</strong> ${name}</p>
-    <p><strong>Email:</strong> ${email}</p>
-    <p><strong>Subject:</strong> ${subject}</p>
-    <p><strong>Message:</strong></p>
-    <p style="background: #f9f9f9; padding: 10px; border-left: 3px solid #2e6da4;">${message}</p>
-    <hr />
-    <p style="font-size: 12px; color: #999;">Sent from your website contact form.</p>
+  <div style="font-family: Arial, sans-serif; max-width: 600px; margin: auto; border: 1px solid #eee; border-radius: 8px; overflow: hidden;">
+
+    <!-- Header -->
+    <div style="background-color: #001f3f; padding: 20px; text-align: center;">
+      <img src="https://res.cloudinary.com/dnrkwondc/image/upload/v1752065092/logo_iebtkx.jpg" alt="DataKernels" style="height: 50px; margin-bottom: 10px;" />
+      <h2 style="color: #ffffff; margin: 0; font-size: 20px;">📩 New Contact Form Submission</h2>
+    </div>
+
+    <!-- Body -->
+    <div style="padding: 24px; background-color: #ffffff; color: #333;">
+      <p><strong>Name:</strong> ${name}</p>
+      <p><strong>Email:</strong> ${email}</p>
+      <p><strong>Subject:</strong> ${subject}</p>
+      <p><strong>Message:</strong></p>
+      <div style="margin: 10px 0; padding: 16px; background-color: #f7f7f7; border-left: 4px solid #001f3f;">
+        <p style="margin: 0;">${message}</p>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <div style="background-color: #f0f0f0; padding: 16px; text-align: center; font-size: 12px; color: #888;">
+      <p style="margin: 4px 0;">This message was sent via the website contact form.</p>
+      <p style="margin: 4px 0;">Please do not reply directly to this email.</p>
+    </div>
   </div>
 `,
     });
