@@ -4,7 +4,7 @@ export const jobRoles: Record<string, JobRole> = {
   "business-analyst": {
     title: "Business Analyst",
     location: "Remote",
-    shortDesc: "Purely Remote • Full-time/Internship",
+    shortDesc: "Remote • Full-time/Internship",
     employmentType: "Full-time / Internship",
     description: `We are a fast-growing technology consulting firm delivering end-to-end solutions across Data Analytics, AI, CRM, Web and App Development. Our mission is to empower businesses with intelligent solutions that drive measurable impact. We're now looking for a skilled Business Analyst to join our team and bridge the gap between business needs and technical solutions.`,
     summary: `As a Business Analyst, you will serve as the crucial link between our clients and technical teams. You'll analyze business processes, identify improvement opportunities, and translate business requirements into actionable technical specifications, all while working remotely from your preferred location.`,
@@ -35,7 +35,7 @@ export const jobRoles: Record<string, JobRole> = {
   "project-manager": {
     title: "Project Manager",
     location: "Remote",
-    shortDesc: "Purely Remote",
+    shortDesc: "Remote",
     employmentType: "Full-time",
     description: `We are a fast-growing technology consulting firm delivering end-to-end solutions across Data Analytics, AI, CRM, Web and App Development. Our mission is to empower businesses with intelligent solutions that drive measurable impact. We're now looking for a dynamic Project Manager to join our team and lead critical client projects across domains like Data, AI, and CRM.`,
     summary: `As a Project Manager, you will serve as the key liaison between our clients and internal technical teams. You will be responsible for driving conversations with clients, prioritizing tasks for teams, identifying improvement areas in ongoing solutions, and ensuring projects are delivered efficiently and effectively.`,
@@ -63,9 +63,9 @@ export const jobRoles: Record<string, JobRole> = {
       "Work from the comfort and ease of your home while managing global projects and leading distributed teams across different time zones.",
   },
   "ai-ml": {
-    title: "AI/ML",
+    title: "AI/ML Engineer",
     location: "Remote",
-    shortDesc: "Purely Remote • Full-time/Internship",
+    shortDesc: "Remote • Full-time/Internship",
     employmentType: "Full-time / Internship",
     description: `We are a fast-growing technology consulting firm delivering end-to-end solutions across Data Analytics, AI, CRM, Web and App Development. Our mission is to empower businesses with intelligent solutions that drive measurable impact. We're now looking for a dynamic AI/ML Engineer to join our team and build cutting-edge artificial intelligence solutions.`,
     summary: `As an AI/ML Engineer, you will be responsible for designing, developing, and deploying machine learning models and AI systems that solve complex business problems. You'll work with large datasets, implement state-of-the-art algorithms, and create scalable AI solutions from the comfort of your home.`,
@@ -96,7 +96,7 @@ export const jobRoles: Record<string, JobRole> = {
   "data-scientist": {
     title: "Data Scientist",
     location: "Remote",
-    shortDesc: "Purely Remote • Full-time/Internship",
+    shortDesc: "Remote • Full-time/Internship",
     employmentType: "Full-time / Internship",
     description: `We are a fast-growing technology consulting firm delivering end-to-end solutions across Data Analytics, AI, CRM, Web and App Development. Our mission is to empower businesses with intelligent solutions that drive measurable impact. We're now looking for an experienced Data Scientist to join our team and extract meaningful insights from complex datasets.`,
     summary: `As a Data Scientist, you will be responsible for analyzing large datasets, building predictive models, and generating actionable insights that drive business decisions. You'll work with cutting-edge tools and techniques to solve complex problems across various industries, all from the comfort of your home office.`,
@@ -127,7 +127,7 @@ export const jobRoles: Record<string, JobRole> = {
   "zoho-developer": {
     title: "ZOHO Developer",
     location: "Remote",
-    shortDesc: "Purely Remote • Full-time/Internship",
+    shortDesc: "Remote • Full-time/Internship",
     employmentType: "Full-time / Internship",
     description: `We are a fast-growing technology consulting firm delivering end-to-end solutions across Data Analytics, AI, CRM, Web and App Development. Our mission is to empower businesses with intelligent solutions that drive measurable impact. We're now looking for a skilled ZOHO Developer to join our team and create powerful business automation solutions.`,
     summary: `As a ZOHO Developer, you will be responsible for designing, developing, and implementing custom ZOHO applications and integrations. You'll work with clients to understand their business processes and create tailored solutions that enhance productivity and streamline operations, all while working remotely.`,

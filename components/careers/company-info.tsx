@@ -25,28 +25,28 @@ export function CompanyInfo() {
           </h3>
           <div className="space-y-3 text-gray-600">
             <p>
-              🚀 <strong>Cutting-edge Technology:</strong> Work with the latest
+              <strong>Cutting-edge Technology:</strong> Work with the latest
               AI/ML frameworks and tools
             </p>
             <p>
-              🌍 <strong>Global Impact:</strong> Build solutions that transform
+              <strong>Global Impact:</strong> Build solutions that transform
               businesses worldwide
             </p>
             <p>
-              🏠 <strong>100% Remote:</strong> Work from anywhere with complete
+              <strong>100% Remote:</strong> Work from anywhere with complete
               flexibility
             </p>
             <p>
-              📚 <strong>Learning Environment:</strong> Continuous mentorship
-              and skill development opportunities
+              <strong>Learning Environment:</strong> Continuous mentorship and
+              skill development opportunities
             </p>
             <p>
-              🛋️ <strong>Comfort from Home:</strong> Create your perfect
-              workspace in the comfort of your home
+              <strong>Comfort from Home:</strong> Create your perfect workspace
+              in the comfort of your home
             </p>
             <p>
-              🤝 <strong>Collaborative Culture:</strong> Join a team of
-              passionate AI enthusiasts
+              <strong>Collaborative Culture:</strong> Join a team of passionate
+              AI enthusiasts
             </p>
           </div>
         </CardContent>
@@ -54,10 +54,10 @@ export function CompanyInfo() {
 
       <Card>
         <CardContent className="p-6">
-          <h3 className="text-lg font-semibold text-gray-900 mb-3">
+          <h3 className="text-xl font-bold text-gray-900 mb-4">
             What We Offer
           </h3>
-          <ul className="list-disc pl-5 space-y-2 text-gray-600 text-sm">
+          <ul className="list-disc pl-5 space-y-2 text-gray-600">
             <li>Flexible working hours and pure remote work</li>
             <li>Continuous learning and mentorship programs</li>
             <li>Access to latest tools and technologies</li>

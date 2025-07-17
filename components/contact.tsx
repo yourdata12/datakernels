@@ -143,7 +143,7 @@ export default function Contact() {
                     onChange={handleChange}
                     required
                     rows={6}
-                    placeholder="Tell us about your project..."
+                    placeholder="Enter your message..."
                     className="rounded-xl border-gray-200 focus:border-core-blue"
                   />
                 </div>

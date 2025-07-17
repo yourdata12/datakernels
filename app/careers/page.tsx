@@ -5,6 +5,7 @@ import { CompanyInfo } from "@/components/careers/company-info";
 import { JobsSection } from "@/components/careers/jobs-section";
 import { ApplicationModal } from "@/components/careers/application-modal";
 import { jobRoles } from "@/data/job-roles";
+import CareersFooter from "@/components/careers/careers-footer";
 
 export default function CareersPage() {
   const [selectedRole, setSelectedRole] = useState<string | null>(null);
@@ -64,6 +65,8 @@ export default function CareersPage() {
         onClose={closeModal}
         roleTitle={selectedRoleTitle}
       />
+
+      <CareersFooter />
     </div>
   );
 }

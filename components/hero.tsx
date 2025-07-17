@@ -32,7 +32,7 @@ export default function Hero() {
   return (
     <section
       id="home"
-      className="relative min-h-screen flex items-center justify-center bg-background"
+      className="relative min-h-screen flex items-center justify-center bg-background pt-[60px]"
     >
       {/* Background Image with gradient overlay */}
       <div className="absolute inset-0 z-0">
@@ -52,7 +52,7 @@ export default function Hero() {
         <div className="mb-12">
           <div className="transition-all duration-1000 ease-in-out">
             <h1
-              className="text-5xl sm:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight"
+              className="text-4xl sm:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight"
               data-aos="fade-up"
             >
               {heroTexts[currentText].title}

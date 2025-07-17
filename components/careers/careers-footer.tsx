@@ -23,7 +23,7 @@ const services = [
   "Agentic AI Flows",
 ];
 
-export default function Footer() {
+export default function CareersFooter() {
   const scrollToSection = (href: string) => {
     const element = document.getElementById(href.substring(1));
     if (element) {
@@ -38,17 +38,17 @@ export default function Footer() {
   return (
     <footer className="bg-foreground text-background">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
           {/* Company Info */}
           <div className="space-y-6">
-            <Link href="#">
-            <Image
-              src="/logo.jpeg"
-              alt="DataKernels"
-              width={240}
-              height={80}
-              className="h-16 w-auto invert"
-            />
+            <Link href="/">
+              <Image
+                src="/logo.jpeg"
+                alt="DataKernels"
+                width={240}
+                height={80}
+                className="h-16 w-auto invert"
+              />
             </Link>
             <p className="text-gray-300 leading-relaxed">
               Transforming businesses with AI and cutting-edge technology
@@ -58,7 +58,7 @@ export default function Footer() {
           </div>
 
           {/* Quick Links */}
-          <div className="space-y-6">
+          {/* <div className="space-y-6">
             <h4 className="text-xl font-bold text-background">Quick Links</h4>
             <ul className="space-y-3">
               {quickLinks.map((link) => (
@@ -76,10 +76,10 @@ export default function Footer() {
                 <Link href="/careers">Careers</Link>
               </li>
             </ul>
-          </div>
+          </div> */}
 
           {/* Services */}
-          <div className="space-y-6">
+          <div className="space-y-6 flex flex-col justify-center items-center">
             <h4 className="text-xl font-bold text-background">Our Services</h4>
             <ul className="space-y-3">
               {services.map((service) => (

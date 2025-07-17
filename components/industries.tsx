@@ -89,7 +89,7 @@ function Industries() {
               {industries.map((industry, index) => (
                 <CarouselItem
                   key={index}
-                  className="basis-full sm:basis-3/4 md:basis-1/2 lg:basis-1/3"
+                  className="basis-full sm:basis-3/4 md:basis-1/2 lg:basis-1/3 mb-5"
                   data-aos="fade-up"
                   data-aos-delay={index * 100}
                 >

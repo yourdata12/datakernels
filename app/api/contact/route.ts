@@ -74,7 +74,7 @@ Message: ${message}
     //     });
 
     await transporter.sendMail({
-      from: `"Your Data Guys" <${process.env.EMAIL_USER}>`,
+      from: `"DataKernels" <${process.env.EMAIL_USER}>`,
       to: email,
       subject: "Thanks for contacting us!",
       html: `
@@ -82,7 +82,7 @@ Message: ${message}
     
     <!-- Header -->
     <div style="background-color: #001f3f; padding: 20px; text-align: center;">
-      <img src="https://res.cloudinary.com/dnrkwondc/image/upload/v1752065092/logo_iebtkx.jpg" alt="Your Data Guys" style="height: 50px; margin-bottom: 10px;" />
+      <img src="https://res.cloudinary.com/dnrkwondc/image/upload/v1752065092/logo_iebtkx.jpg" alt="DataKernels" style="height: 50px; margin-bottom: 10px;" />
       <h1 style="color: #ffffff; margin: 0; font-size: 22px;">Thanks for Reaching Out, ${name}!</h1>
     </div>
 
@@ -90,7 +90,7 @@ Message: ${message}
     <div style="padding: 24px; background-color: #ffffff;">
       <p style="font-size: 16px; color: #333;">Hello <strong>${name}</strong>,</p>
       <p style="font-size: 15px; color: #333;">
-        Thank you for contacting <strong>Your Data Guys</strong>. We've received your message and will get back to you shortly.
+        Thank you for contacting <strong>DataKernels</strong>. We've received your message and will get back to you shortly.
       </p>
 
       <div style="margin: 20px 0; padding: 16px; background-color: #f7f7f7; border-left: 4px solid #001f3f;">
@@ -108,7 +108,7 @@ Message: ${message}
 
     <!-- Footer -->
     <div style="background-color: #f0f0f0; padding: 16px; text-align: center; font-size: 12px; color: #888;">
-      <p style="margin: 4px 0;">Your Data Guys — Patiala, Punjab, India</p>
+      <p style="margin: 4px 0;">DataKernels — Patiala, Punjab, India</p>
       <p style="margin: 4px 0;">Email: admin@datakernels.in</p>
       <p style="margin-top: 10px;">This is an automated confirmation. No reply needed.</p>
     </div>
