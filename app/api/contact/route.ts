@@ -37,7 +37,7 @@ export async function POST(req: NextRequest) {
     // 3. Send to admin
     await transporter.sendMail({
       from: `"Website Contact" <${process.env.EMAIL_USER}>`,
-      to: "arshbedi2517@gmail.com", // Admin email (hardcoded)
+      to: "admin@datakernels.in", // Admin email (hardcoded)
       subject: `New Contact Form: ${subject}`,
       // text: fullMessage,
       html: `
