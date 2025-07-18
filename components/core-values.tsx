@@ -25,7 +25,7 @@ export default function CoreValues() {
       title: "PARTNERSHIP",
       description:
         "Collaborating closely with clients to understand their vision and achieve shared success.",
-      color: "bg-red-200 text-red-900",
+      color: "bg-orange-200 text-orange-900",
       aos: "fade-up",
     },
   ];

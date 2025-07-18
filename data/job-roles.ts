@@ -155,4 +155,99 @@ export const jobRoles: Record<string, JobRole> = {
     remoteNote:
       "Work purely remote from the comfort and ease of your home while building innovative ZOHO solutions for clients worldwide, with flexible scheduling that fits your lifestyle.",
   },
+  "frontend-developer": {
+    title: "Front End Developer",
+    location: "Remote",
+    shortDesc: "Remote • Full-time/Internship",
+    employmentType: "Full-time / Internship",
+    remoteNote:
+      "Enjoy the flexibility of remote work from the ease of your home, with access to modern dev tools, collaborative platforms, and cloud-based environments that let you build stunning user interfaces from anywhere.",
+    summary:
+      "We are looking for a Front-End Developer who is passionate about building modern, responsive, and visually appealing web interfaces. You will be at the forefront of our client-facing platforms, working closely with designers, backend engineers, and stakeholders to deliver seamless digital experiences.",
+    description:
+      "As a Front-End Developer at DataKernels, you'll translate creative designs and concepts into high-performing user interfaces using the latest technologies. You'll work with a team of problem-solvers and innovators to develop scalable web applications using frameworks like React and Next.js. Candidates should be comfortable working in fast-paced environments and have a strong grasp of web fundamentals and tooling. Familiarity with AI tools for prototyping or automation is a huge plus.",
+    responsibilities: [
+      "Develop responsive, pixel-perfect UIs using React.js and Next.js.",
+      "Convert design mockups (Figma, PSD, etc.) into functional components.",
+      "Collaborate with designers and backend developers to create seamless user experiences.",
+      "Optimize applications for maximum speed, performance, and accessibility.",
+      "Use AI tools like ChatGPT, Lovable, or V0.dev to streamline workflows or generate ideas.",
+      "Stay up-to-date with the latest trends in front-end development and UI/UX practices.",
+      "Participate in code reviews and contribute to team knowledge-sharing.",
+    ],
+    requirements: [
+      "Strong understanding of HTML5, CSS3 (Flexbox, Grid), and JavaScript (ES6+).",
+      "Experience with React.js and preferably Next.js for SSR and routing.",
+      "Familiarity with REST APIs and asynchronous data handling (fetch, axios).",
+      "Good eye for design and attention to detail in implementation.",
+      "Knowledge of version control tools like Git.",
+      "Experience with TailwindCSS, or similar utility-first CSS frameworks is a plus.",
+      "Knowledge of AI tools (ChatGPT, V0.dev, etc.) for enhanced productivity.",
+      "B.Tech or equivalent degree in Computer Science, IT, or a related field. Master's or PhD is a bonus.",
+      "Excellent problem-solving skills and eagerness to learn new technologies.",
+      "Portfolio or GitHub showcasing relevant work is highly encouraged.",
+    ],
+  },
+  "marketing-analyst": {
+    title: "Marketing Analyst",
+    shortDesc: "Remote • Full-time/Internship",
+
+    location: "Remote",
+    employmentType: "Full-time",
+    remoteNote:
+      "Enjoy the flexibility of remote work from the ease of your home, with access to cloud-based analytics tools and platforms that enable you to drive data-informed marketing strategies from anywhere.",
+    summary:
+      "We are seeking a detail-oriented Marketing Analyst to turn marketing data into actionable insights. You’ll play a critical role in optimizing campaigns, understanding audience behavior, and measuring performance across digital channels.",
+    description:
+      "At DataKernels, data is at the core of everything we do — including marketing. As a Marketing Analyst, you’ll analyze performance metrics, customer journeys, and digital campaign effectiveness. Your insights will help shape smarter marketing strategies that are driven by numbers and optimized for real impact. Ideal candidates are analytical thinkers who enjoy storytelling through data and are comfortable working with various analytics and visualization tools.",
+    responsibilities: [
+      "Analyze marketing performance across digital channels (web, social, email, etc.) to measure ROI and improve strategies.",
+      "Develop dashboards and reports to communicate findings to marketing and leadership teams.",
+      "Identify customer trends, behavioral patterns, and growth opportunities using tools like Google Analytics, Meta Ads Manager, etc.",
+      "Collaborate with content, design, and sales teams to align data insights with business goals.",
+      "Conduct competitor analysis and monitor industry trends to inform future campaigns.",
+      "Support A/B testing, SEO, and email automation strategy with data-driven insights.",
+      "Help forecast performance and budget planning for upcoming campaigns.",
+    ],
+    requirements: [
+      "Strong analytical and critical thinking skills with attention to detail.",
+      "Basic knowledge of marketing concepts including digital channels, SEO, PPC, and content marketing.",
+      "Experience with tools like Google Analytics, Excel, Meta/LinkedIn Ads Manager, or similar platforms.",
+      "Ability to translate complex data into simple, actionable recommendations.",
+      "Familiarity with visualization tools like Google Data Studio, Tableau, or Power BI is a plus.",
+      "Bachelor’s degree in Marketing, Business, Economics, Statistics, or a related field. Higher education is a plus.",
+      "Strong communication skills and comfort presenting data to non-technical stakeholders.",
+      "Willingness to learn new tools, adapt quickly, and grow within a collaborative team environment.",
+    ],
+  },
+  "hr-generalist": {
+    title: "Human Resources (HR) Generalist",
+    location: "Remote",
+    shortDesc: "Remote • Full-time/Internship",
+    employmentType: "Full-time / Internship",
+    description: `We are a fast-growing technology consulting firm delivering end-to-end solutions across Data Analytics, AI, CRM, Web and App Development. Our mission is to empower businesses with intelligent solutions that drive measurable impact. We're looking for an empathetic and organized HR Generalist to support our growing remote team.`,
+    summary: `As an HR Generalist, you'll play a key role in managing people operations, employee engagement, recruitment, and supporting a healthy remote work culture. This role is perfect for someone who enjoys building inclusive environments and ensuring smooth HR processes across the employee lifecycle.`,
+    responsibilities: [
+      "Manage recruitment, onboarding, and exit processes for remote teams",
+      "Maintain employee records and ensure compliance with HR policies",
+      "Coordinate virtual team-building, wellness, and engagement initiatives",
+      "Support performance reviews and employee feedback cycles",
+      "Assist in creating and updating HR documentation and handbooks",
+      "Serve as a point of contact for employee concerns and support",
+      "Foster a positive and inclusive work culture aligned with company values",
+      "Collaborate with leadership to improve people processes and satisfaction",
+    ],
+    requirements: [
+      "Bachelor’s degree in HR, Business Administration, Psychology, or related field",
+      "0–2 years of experience in HR or people operations (internships count)",
+      "Strong communication and interpersonal skills",
+      "Basic knowledge of labor laws and HR best practices",
+      "Ability to handle confidential information with discretion",
+      "Comfortable working with HR tools and remote communication platforms",
+      "Proactive, organized, and detail-oriented",
+      "Empathy-driven approach to team and culture management",
+    ],
+    remoteNote:
+      "Enjoy the flexibility of remote work from the ease of your home, with access to cloud-based tools that help you manage and grow our people-first culture from anywhere.",
+  },
 };

@@ -13,15 +13,17 @@ export async function POST(req: NextRequest) {
       );
     }
 
-    // 1. Compose message
-    const fullMessage = `
-New Contact Form Submission
+    const formattedMessage = message.replace(/\n/g, "<br/>");
 
-Name: ${name}
-Email: ${email}
-Subject: ${subject}
-Message: ${message}
-`.trim();
+    // 1. Compose message
+    //     const fullMessage = `
+    // New Contact Form Submission
+
+    // Name: ${name}
+    // Email: ${email}
+    // Subject: ${subject}
+    // Message: ${message}
+    // `.trim();
 
     // 2. Create Nodemailer transporter
     const transporter = nodemailer.createTransport({
@@ -41,29 +43,30 @@ Message: ${message}
       html: `
   <div style="font-family: Arial, sans-serif; max-width: 600px; margin: auto; border: 1px solid #eee; border-radius: 8px; overflow: hidden;">
 
-    <!-- Header -->
-    <div style="background-color: #001f3f; padding: 20px; text-align: center;">
-      <img src="https://res.cloudinary.com/dnrkwondc/image/upload/v1752065092/logo_iebtkx.jpg" alt="DataKernels" style="height: 50px; margin-bottom: 10px;" />
-      <h2 style="color: #ffffff; margin: 0; font-size: 20px;">📩 New Contact Form Submission</h2>
-    </div>
+  <!-- Banner -->
+  <div>
+    <img src="https://res.cloudinary.com/dnrkwondc/image/upload/v1752832116/DK-banner1_jotcwy.png" alt="DataKernels Banner" style="width: 100%; max-height: 200px; object-fit: cover;" />
+  </div>
 
-    <!-- Body -->
-    <div style="padding: 24px; background-color: #ffffff; color: #333;">
-      <p><strong>Name:</strong> ${name}</p>
-      <p><strong>Email:</strong> ${email}</p>
-      <p><strong>Subject:</strong> ${subject}</p>
-      <p><strong>Message:</strong></p>
-      <div style="margin: 10px 0; padding: 16px; background-color: #f7f7f7; border-left: 4px solid #001f3f;">
-        <p style="margin: 0;">${message}</p>
-      </div>
-    </div>
-
-    <!-- Footer -->
-    <div style="background-color: #f0f0f0; padding: 16px; text-align: center; font-size: 12px; color: #888;">
-      <p style="margin: 4px 0;">This message was sent via the website contact form.</p>
-      <p style="margin: 4px 0;">Please do not reply directly to this email.</p>
+  <!-- Body -->
+  <div style="padding: 24px; background-color: #ffffff; color: #333;">
+    <p style="font-size: 18px; font-weight: bold; margin-bottom: 16px;">📩 New Contact Form Submission</p>
+    <p><strong>Name:</strong> ${name}</p>
+    <p><strong>Email:</strong> ${email}</p>
+    <p><strong>Subject:</strong> ${subject}</p>
+    <p><strong>Message:</strong></p>
+    <div style="margin: 10px 0; padding: 16px; background-color: #f7f7f7; border-left: 4px solid #001f3f;">
+      <p style="margin: 0;">${formattedMessage}</p>
     </div>
   </div>
+
+  <!-- Footer -->
+  <div style="background-color: #f0f0f0; padding: 16px; text-align: center; font-size: 12px; color: #888;">
+    <p style="margin: 4px 0;">This message was sent via the website contact form.</p>
+    <p style="margin: 4px 0;">Please do not reply directly to this email.</p>
+  </div>
+</div>
+
 `,
     });
 
@@ -93,41 +96,41 @@ Message: ${message}
       to: email,
       subject: "Thanks for contacting us!",
       html: `
-  <div style="font-family: Arial, sans-serif; max-width: 600px; margin: auto; border: 1px solid #eee; border-radius: 8px; overflow: hidden;">
-    
-    <!-- Header -->
-    <div style="background-color: #001f3f; padding: 20px; text-align: center;">
-      <img src="https://res.cloudinary.com/dnrkwondc/image/upload/v1752065092/logo_iebtkx.jpg" alt="DataKernels" style="height: 50px; margin-bottom: 10px;" />
-      <h1 style="color: #ffffff; margin: 0; font-size: 22px;">Thanks for Reaching Out, ${name}!</h1>
-    </div>
+ <div style="font-family: Arial, sans-serif; max-width: 600px; margin: auto; border: 1px solid #eee; border-radius: 8px; overflow: hidden;">
 
-    <!-- Body -->
-    <div style="padding: 24px; background-color: #ffffff;">
-      <p style="font-size: 16px; color: #333;">Hello <strong>${name}</strong>,</p>
-      <p style="font-size: 15px; color: #333;">
-        Thank you for contacting <strong>DataKernels</strong>. We've received your message and will get back to you shortly.
-      </p>
-
-      <div style="margin: 20px 0; padding: 16px; background-color: #f7f7f7; border-left: 4px solid #001f3f;">
-        <p style="font-style: italic; margin: 0;">"${message}"</p>
-      </div>
-
-      <p style="font-size: 15px; color: #333;">
-        In the meantime, feel free to explore our latest AI solutions and insights on our website.
-      </p>
-
-      <a href="https://datakernels.in" style="display: inline-block; margin-top: 20px; padding: 10px 20px; background-color: #001f3f; color: #fff; text-decoration: none; border-radius: 4px;">
-        Visit Our Website
-      </a>
-    </div>
-
-    <!-- Footer -->
-    <div style="background-color: #f0f0f0; padding: 16px; text-align: center; font-size: 12px; color: #888;">
-      <p style="margin: 4px 0;">DataKernels — Patiala, Punjab, India</p>
-      <p style="margin: 4px 0;">Email: admin@datakernels.in</p>
-      <p style="margin-top: 10px;">This is an automated confirmation. No reply needed.</p>
-    </div>
+  <!-- Banner Header with Text Inside Image -->
+  <div style="width: 100%;">
+    <img src="https://res.cloudinary.com/dnrkwondc/image/upload/v1752832116/DK-banner1_jotcwy.png" alt="DataKernels Banner" style="width: 100%; height: auto; display: block;" />
   </div>
+
+  <!-- Body -->
+  <div style="padding: 24px; background-color: #ffffff;">
+    <p style="font-size: 16px; color: #333;">Hello <strong>${name}</strong>,</p>
+    <p style="font-size: 15px; color: #333;">
+      Thank you for contacting <strong>DataKernels</strong>. We've received your message and will get back to you shortly.
+    </p>
+
+    <div style="margin: 20px 0; padding: 16px; background-color: #f7f7f7; border-left: 4px solid #001f3f;">
+      <p style="font-style: italic; margin: 0;">"${formattedMessage}"</p>
+    </div>
+
+    <p style="font-size: 15px; color: #333;">
+      In the meantime, feel free to explore our latest AI solutions and insights on our website.
+    </p>
+
+    <a href="https://datakernels.in" style="display: inline-block; margin-top: 20px; padding: 10px 20px; background-color: #001f3f; color: #fff; text-decoration: none; border-radius: 4px;">
+      Visit Our Website
+    </a>
+  </div>
+
+  <!-- Footer -->
+  <div style="background-color: #f0f0f0; padding: 16px; text-align: center; font-size: 12px; color: #888;">
+    <p style="margin: 4px 0;">DataKernels — Patiala, Punjab, India</p>
+    <p style="margin: 4px 0;">Email: admin@datakernels.in</p>
+    <p style="margin-top: 10px;">This is an automated confirmation. No reply needed.</p>
+  </div>
+</div>
+
   `,
     });
 
